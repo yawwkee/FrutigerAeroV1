@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>yawwke</title>
+    <link rel="stylesheet" href="https://unpkg.com/7.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700;800&family=Comfortaa:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- <div class="bubble" style="width: 60px; height: 60px; left: 10%; animation-delay: 0s;"></div>
+    <div class="bubble" style="width: 30px; height: 30px; left: 70%; animation-delay: 3s;"></div>
+    <div class="bubble" style="width: 45px; height: 45px; left: 40%; animation-delay: 6s;"></div>
+    <div class="bubble" style="width: 20px; height: 20px; left: 85%; animation-delay: 1s;"></div>
+    <div class="bubble" style="width: 50px; height: 50px; left: 25%; animation-delay: 8s;"></div> -->
+
+    <audio id="player" src="track1.mp3"></audio>
+
+    <!-- ЕКРАН 1 -->
+    <div id="screen-intro">
+        <div class="container">
+            <div class="window active" style="width: 300px;">
+                <div class="title-bar">
+                    <div class="title-bar-text">👋 Hi</div>
+                    <div class="title-bar-controls">
+                        <button aria-label="Minimize"></button>
+                        <button aria-label="Maximize"></button>
+                        <button aria-label="Close"></button>
+                    </div>
+                </div>
+                <div class="window-body has-space">
+                    <p>Portfolio</p>
+                    <section style="display: flex; justify-content: flex-end;">
+                        <button id="btn" class="default">Next</button>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ЕКРАН 2 -->
+    <div id="screen-main">
+
+                    <div id="main-header">
+                <div class="title-bar">
+                    <div class="title-bar-text">yawwke</div>
+                    <div class="title-bar-controls">
+                        <button aria-label="Minimize"></button>
+                        <button aria-label="Maximize"></button>
+                    </div>
+                </div>
+            </div>
+
+        <!-- Плеєр -->
+        <div class="player-card window active">
+            <div class="title-bar">
+                <div class="title-bar-text">🎵 Player</div>
+                <div class="title-bar-controls">
+                    <button aria-label="Minimize"></button>
+                </div>
+            </div>
+            <div class="window-body has-space">
+                <div class="track-name" id="track-name">track1.mp3</div>
+                <div class="player-controls">
+                    <button id="prev">⏮</button>
+                    <button id="play-pause">⏸</button>
+                    <button id="next">⏭</button>
+                </div>
+            </div>
+            <div class="status-bar">
+                <p class="status-bar-field">🎵 Now playing</p>
+            </div>
+        </div>
+
+        <!-- Секції -->
+        <div class="sections">
+
+            <div class="window active section-card">
+                <div class="title-bar">
+                    <div class="title-bar-text">👋 About me</div>
+                    <div class="title-bar-controls">
+                        <button aria-label="Minimize"></button>
+                    </div>
+                </div>
+                <div class="window-body has-space">
+                    <p>soon</p>
+                </div>
+            </div>
+
+            <div class="window active section-card">
+                <div class="title-bar">
+                    <div class="title-bar-text">🌐 Socials</div>
+                    <div class="title-bar-controls">
+                        <button aria-label="Minimize"></button>
+                    </div>
+                </div>
+                <div class="window-body has-space">
+                    <ul>
+                        <li><a href="https://github.com/yawwkee" target="_blank"><i class="fab fa-github"></i> GitHub</a></li>
+                        <li><a href="https://t.me/delluvio" target="_blank"><i class="fab fa-telegram"></i> Telegram</a></li>
+                        <li><a href="https://instagram.com/yawwke" target="_blank"><i class="fab fa-instagram"></i> Instagram</a></li>
+                        <li><a href="https://www.linkedin.com/in/pavlo-mysiuk-bb8b642a7/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+                    </ul>
+                </div>
+                <div class="status-bar">
+                    <p class="status-bar-field">Press F1 for help</p>
+                    <p class="status-bar-field">Slide 1</p>
+                    <p class="status-bar-field">CPU Usage: 14%</p>
+                </div>
+            </div>
+
+            <div class="window active section-card">
+                <div class="title-bar">
+                    <div class="title-bar-text">🚀 Soon</div>
+                    <div class="title-bar-controls">
+                        <button aria-label="Minimize"></button>
+                    </div>
+                </div>
+                <div class="window-body has-space">
+                    <p>soon</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

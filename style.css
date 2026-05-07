@@ -1,0 +1,149 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    background: linear-gradient(165deg,
+        #389bd0 0%,
+        #a0d8f8 30%,
+        #21e0b0 65%,
+        #b8e8ca 100%
+    );
+    min-height: 100vh;
+}
+
+.bubble {
+    position: fixed;
+    bottom: -100px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 35% 35%,
+        rgba(255,255,255,0.9) 0%,
+        rgba(180,230,255,0.4) 40%,
+        transparent 100%
+    );
+    border: 1px solid rgba(255,255,255,0.8);
+    animation: floatUp 10s linear infinite;
+    pointer-events: none;
+    z-index: 0;
+}
+
+@keyframes floatUp {
+    from { transform: translateY(0); opacity: 0; }
+    10%  { opacity: 0.7; }
+    90%  { opacity: 0.5; }
+    to   { transform: translateY(-110vh); opacity: 0; }
+}
+
+#screen-intro {
+    position: fixed;
+    inset: 0;
+    z-index: 10;
+    transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.7s ease;
+}
+
+#screen-intro.slide-up {
+    transform: translateY(-100vh);
+    opacity: 0;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+#screen-main {
+    display: none;
+    padding-top: 28px;
+}
+
+#main-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+#main-header.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.player-card {
+    position: fixed;
+    top: 24px;
+    right: 0;
+    z-index: 100;
+    width: 220px;
+}
+
+.track-name {
+    font-size: 11px;
+    color: #444;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.player-controls button {
+    flex: 1;
+    min-width: 0;
+}
+
+.player-controls {
+    display: flex;
+    gap: 4px;
+    width: 100%;
+}
+
+.sections {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px 20px 60px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.section-card {
+    padding: 0 !important;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.section-card.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media (max-width: 600px) {
+    .player-card {
+        top: auto;
+        bottom: 20px;
+        right: 50%;
+        transform: translateX(50%);
+        width: 200px;
+    }
+
+    #screen-main {
+        padding-top: 50px;
+        padding-bottom: 140px;
+    }
+
+    .sections {
+        padding: 16px 12px 40px;
+    }
+}
+body {
+    background: url('PXmqh0.jpg') center center / cover no-repeat fixed;
+    min-height: 100vh;
+}
